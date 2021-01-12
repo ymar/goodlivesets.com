@@ -30,6 +30,14 @@
     <meta name="keywords" content="{{ metaKeywords }}">
     <meta name="author" content="{{ author.name }}">
     <meta name="robots" content="index, follow">
+    <meta property="og:title" content="{{ metaTitle }}">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="{ site.url | url }}{{ page.url }}">
+    <meta property="og:image" content="https://img.youtube.com/vi{{ page.url }}maxresdefault.jpg">
+    <meta name="twitter:image" content="https://img.youtube.com/vi{{ page.url }}maxresdefault.jpg">
+    <meta name="twitter:creator" content="@goodlivesets">
+    <meta name="twitter:site" content="@goodlivesets">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="canonical" href="{{ site.url | url }}{{ page.url }}">
     <link rel="shortcut icon" type="image/png" href="{{ '/assets/img/favicon.png' | url }}">
     <link rel="apple-touch-icon" href="{{ '/assets/img/apple-touch-icon.png' | url }}">
@@ -39,6 +47,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | url }}">
+    
 </head>	
 
 <body class="flex flex-col h-screen bg-white text-gray-800 break-words">

@@ -1,9 +1,15 @@
+
+const embedEverything = require("eleventy-plugin-embed-everything");
+
+
+
 const pluginTailwind = require('eleventy-plugin-tailwindcss');
 
 module.exports = (config) => {
   config.addPlugin(pluginTailwind, {
     src: 'src/assets/css/*'
   });
+
 
   config.setDataDeepMerge(true);
 
@@ -23,6 +29,9 @@ module.exports = (config) => {
   config.addCollection('pagedPosts', require('./lib/collections/pagedPosts'));
   config.addCollection('pagedPostsByTag', require('./lib/collections/pagedPostsByTag'));
 
+  config.addPlugin(embedEverything);
+
+
   return {
     dir: {
       input: 'src',
@@ -34,3 +43,4 @@ module.exports = (config) => {
     markdownTemplateEngine: 'njk'
   };
 };
+
